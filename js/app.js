@@ -17,9 +17,7 @@ let sec = 1;
 
 
 function shuffle(array) {
-    let currentIndex = array.length,
-        temporaryValue,
-        randomIndex;
+    var currentIndex = array.length, temporaryValue, randomIndex;
 
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
@@ -32,6 +30,9 @@ function shuffle(array) {
     return array;
 }
 
+var deck = ["fa-diamond", "fa-diamond", "fa-paper-plane-o", "fa-paper-plane-o", "fa-anchor", "fa-anchor",
+           "fa-bolt", "fa-bolt", "fa-cube", "fa-cube", "fa-leaf", "fa-leaf",
+           "fa-bicycle", "fa-bicycle", "fa-bomb", "fa-bomb"];
 
 function shuffleCards() {
     const cardsArray = Array.from(document.querySelectorAll('.deck li'));
@@ -149,6 +150,15 @@ function startTimer() {
 
 }
 
+function updateCards() {
+    deck = shuffle(deck);
+    var index = 0;
+    $.each($(".card i"), function(){
+      $(this).attr("class", "fa " + deck[index]);
+      index++;
+    });
+    resetTimer();
+};
 
 function modal() {
     const starScore = document.querySelector('.star-modal');
