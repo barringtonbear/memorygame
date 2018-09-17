@@ -59,7 +59,7 @@ function flipCards() {
             compareCards();
         }
     });
-}
+} 
 
 
 function compareCards() {
