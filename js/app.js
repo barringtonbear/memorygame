@@ -251,3 +251,4 @@ refreshButton();
 
 startTimer();
 flipCards();
+$(updateCards);
