@@ -181,7 +181,7 @@ function displayModal() {
     modalBoxShow.classList.toggle('modal-display');
 }
 
-
+ 
 function modalClicks() {
     const yesButton = document.querySelector('.yes');
     const noButton = document.querySelector('.no');
