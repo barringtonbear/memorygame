@@ -16,8 +16,10 @@ let move = 0;
 let sec = 1;
 
 
-function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+function shuffle(array) {	function shuffle(array) {
+    let currentIndex = array.length,	    var currentIndex = array.length, temporaryValue, randomIndex;
+        temporaryValue,	
+        randomIndex;
 
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
